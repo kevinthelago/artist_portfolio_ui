@@ -1,0 +1,140 @@
+#root {
+  font-family: var(--font-family);
+  height: 100vh;
+}
+
+h1 {
+  font-size: var(--h1-font-size) !important;
+  color: var(--primary-text-color);
+}
+
+nav {
+  height: var(--nav-height);
+  padding-left: var(--nav-side-padding);
+  padding-right: var(--nav-side-padding);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  color: var(--primary-text-color);
+  padding-left: var(--li-side-padding);
+  padding-right: var(--li-side-padding);
+}
+
+li>a {
+  padding-left: var(--li-side-padding);
+  padding-right: var(--li-side-padding);
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - var(--nav-height));
+}
+
+.album {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.albums {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+/* width */
+.albums::-webkit-scrollbar {
+  /* display: none; */
+  width: 6px;
+  transition: .3s;
+}
+
+/* Track */
+.albums::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.albums::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .7);
+  border-radius: 3px;
+  transition: .3s;
+}
+
+/* Handle on hover */
+.albums::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.nav-title {
+  flex-grow: 2;
+  display: flex;
+  justify-content: start;
+  padding-left: 1em;
+  font-weight: 900;
+}
+
+.nav-link {
+  transition: .3s;
+  border-bottom: solid 2px transparent;
+}
+
+.nav-link:hover {
+  border-bottom: solid 2px black;
+}
+
+.nav-links {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.icon-small {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-medium {
+  height: 36px;
+  width: 36px;
+}
+
+.icon-large {
+  height: 48px;
+  width: 48px;
+}
+
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    /* background-color: cyan; */
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+.piece {
+    height: 240px;
+    width: 240px;
+    background-size: contain !important;
+    margin: 8px;
+}
