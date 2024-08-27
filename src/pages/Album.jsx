@@ -1,4 +1,4 @@
-import Piece from '../components/Piece/Piece';
+import Piece from '../components/piece/Piece';
 
 const Album = (props) => {
     console.log(props)
