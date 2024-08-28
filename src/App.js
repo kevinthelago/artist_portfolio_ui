@@ -22,7 +22,7 @@ function App() {
   let [albums, setAlbums] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/v1/albums")
+    fetch("https://artistportfolio-2d514932b001.herokuapp.com/api/v1/albums")
         .then(response => response.json())
         .then(data => {
             setAlbums(data)
