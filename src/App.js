@@ -8,15 +8,7 @@ import "./app.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  let [artist, setArtist] = useState({
-    "uuid": "",
-    "albums": [],
-    "name": "",
-    "email": "",
-    "about": "",
-    "links": [],
-    "image": ""
-  });
+  let [artist, setArtist] = useState({});
   let [albums, setAlbums] = useState([]);
 
   useEffect(() => {
