@@ -1,12 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <>
       <nav>
         <div className="nav-title">
           <h1>
-            some lady
+            {props.name}
           </h1>
         </div>
         <ul className="nav-links">

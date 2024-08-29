@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: cyan;
+    /* background-color: cyan; */
 }
 
 .contact-card-icons {
@@ -17,6 +17,6 @@
     .contact-card {
         height: 300px;
         width: 300px;
-        background-color: green;
+        /* background-color: green; */
     }
   }

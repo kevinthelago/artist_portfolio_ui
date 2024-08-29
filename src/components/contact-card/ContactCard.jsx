@@ -1,4 +1,5 @@
 import './contactCard.css';
+import Icon from '../../icons/Icon';
 
 const ContactCard = (props) => (
     <div className="contact-card">
@@ -12,7 +13,9 @@ const ContactCard = (props) => (
             {props.links.map((link, i) => {
                 return(
                     <li key={link + i}>
-                        <a className='icon-small flexc' href={link.link}>{link.icon}</a>
+                        <a className='icon-small flexc' href={link}>
+                            <Icon link={link}/>
+                        </a>
                     </li>
                 )
             })}

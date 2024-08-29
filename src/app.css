@@ -128,13 +128,13 @@ li>a {
   justify-content: center;
   align-items: center;
 }
-
-@media screen and (max-width: 800px) {
+/* 
+@media screen and (max-width: 600px) {
   nav {
-    /* background-color: cyan; */
+    background-color: cyan;
   }
 
   .nav-links {
     display: none;
   }
-}
+} */
