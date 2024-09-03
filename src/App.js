@@ -8,12 +8,18 @@ import "./app.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  let [artist, setArtist] = useState({});
+  let [artist, setArtist] = useState({
+    name: "Some Lady",
+    email: "somelady90@gmail.com",
+    about:
+      "Some Lady is an artist living and working in San Francisco. She received her BA in Studio Arts from CalPoly Humboldt, along with her post baccalaureate in Museum & Gallery Practices while working with the Morris Graves Museum of Art. She continued her graduate studies at the San Francisco Art Institute, SFAI, and is currently enrolled at CIIS for Expressive Arts Therapy. \n\n Some Lady’s current exploration into spiral imagery ties into her work in psychology of exploring complex trauma and healing through symbolism and Jungian archetypes.",
+    links: ["https://www.instagram.com"],
+  });
   let [albums, setAlbums] = useState([]);
 
   useEffect(() => {
     fetch(
-      process.env.REACT_APP_ALUMBS_URL + "/b9e0ac97-195c-4f92-8e78-a8368881d082"
+      process.env.REACT_APP_ALUMBS_URL + "/" + process.env.REACT_APP_ARTIST_UUID
     )
       .then((response) => response.json())
       .then((data) => {
@@ -26,7 +32,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-        process.env.REACT_APP_ARTISTS_URL + "/b9e0ac97-195c-4f92-8e78-a8368881d082"
+      process.env.REACT_APP_ARTISTS_URL + "/" + process.env.REACT_APP_ARTIST_UUID
     )
       .then((response) => response.json())
       .then((data) => {
