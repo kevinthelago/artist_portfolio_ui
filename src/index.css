@@ -25,6 +25,10 @@ code {
   --h4-font-size: 1.5em;
   --h5-font-size: 1em;
 
+  --icon-large: 3em;
+  --icon-medium: 2em;
+  --icon-small: 1em;
+
   --nav-height: 4em;
 
   --li-side-padding: .2em;
