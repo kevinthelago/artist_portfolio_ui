@@ -6,8 +6,8 @@ const Layout = (props) => {
   const ref = useRef();
   const handleClick = (e) => {
     setIsMenuOpen(!isMenuOpen)
-    ref.current.style.width = isMenuOpen ? "100%" : "0";
-    ref.current.style.left = isMenuOpen ? "0%" : "100%";
+    ref.current.style.width = isMenuOpen ? "0%" : "100%";
+    ref.current.style.left = isMenuOpen ? "100%" : "0%";
   }
 
   return (
