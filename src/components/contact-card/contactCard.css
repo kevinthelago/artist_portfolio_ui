@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: rgba(0,0,0,0.1);
+    /* background-color: rgba(0,0,0,0.1); */
     border-radius: 3px;
     transition: .3s;
 }

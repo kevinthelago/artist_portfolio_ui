@@ -7,6 +7,7 @@ const Layout = (props) => {
   const handleClick = (e) => {
     setIsMenuOpen(!isMenuOpen)
     ref.current.style.width = isMenuOpen ? "100%" : "0";
+    ref.current.style.left = isMenuOpen ? "0%" : "100%";
   }
 
   return (
@@ -19,13 +20,13 @@ const Layout = (props) => {
         </div>
         <ul ref={ref} className="nav-links">
           <li id="home" className="nav-link">
-            <Link to="/">Home</Link>
+            <Link onClick={(e) => handleClick(e)} to="/">Home</Link>
           </li>
           <li id="contact" className="nav-link">
-            <Link to="/contact">Contact</Link>
+            <Link onClick={(e) => handleClick(e)} to="/contact">Contact</Link>
           </li>
           <li id="about" className="nav-link">
-            <Link to="/about">About</Link>
+            <Link onClick={(e) => handleClick(e)} to="/about">About</Link>
           </li>
         </ul>
         <button onClick={(e) => handleClick(e)} className="nav-links-mobile-navigator flexc">

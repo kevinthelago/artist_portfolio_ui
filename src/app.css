@@ -124,6 +124,7 @@ li>a {
 }
 
 .nav-links {
+  z-index: 1;
   /* display: none; */
   overflow: hidden;
   position: absolute;
@@ -132,7 +133,7 @@ li>a {
   height: calc(100% - var(--nav-height));
   width: 0;
   flex-direction: column;
-  /* transition: 0.3s; */
+  transition: 0.3s;
 }
 
 .nav-links-mobile-navigator {
@@ -167,5 +168,11 @@ li>a {
 
   .nav-links-mobile-navigator {
     display: none;
+  }
+
+  .nav-link {
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
