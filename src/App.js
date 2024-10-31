@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Album from "./pages/Album";
+import Home from "./pages/home/Home";
+import Contact from "./pages/contact/Contact";
+import About from "./pages/about/About";
+import Album from "./pages/album/Album";
 import Nav from "./pages/Nav";
 import "./app.css";
 import { useState, useEffect } from "react";
+import {  ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   let [artist, setArtist] = useState({
@@ -44,6 +45,7 @@ function App() {
   }, []);
 
   return (
+    <ParallaxProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav name={artist.name} />}>
@@ -60,6 +62,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </ParallaxProvider>
   );
 }
 

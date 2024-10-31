@@ -1,0 +1,57 @@
+.hero {
+    /* height: 600px; */
+    width: 100%;
+    /* background-color: red; */
+    aspect-ratio: 9 / 14;
+}
+
+.hero>video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.hero>.overlay {
+    position: absolute;
+    aspect-ratio: 9 / 14;
+    width: 100%;
+    background-color: linear-gradient(blue, red);
+}
+
+.albums-break {
+    height: 68px;
+    width: 100%;
+}
+
+.album-link {
+    width: 100%;
+    aspect-ratio: 9 / 14;
+    /* background-color: blue; */
+}
+
+.parallax-banner {
+    width: 100%;
+    aspect-ratio: 9 / 14;
+}
+
+@media screen and (min-width: 600px) {
+    .hero {
+        aspect-ratio: 16 / 9;
+    }
+
+    .album-link {
+        aspect-ratio: 16 / 9;
+    }
+
+    .album-description {
+        aspect-ratio: 16 / 9;
+    }
+
+    .hero>.overlay {
+        aspect-ratio: 16 / 9;
+    }
+
+    .parallax-banner {
+        aspect-ratio: 16 / 9;
+    }
+}

@@ -38,19 +38,18 @@ li>a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100% - var(--nav-height));
+  /* height: calc(100% - var(--nav-height)); */
 }
 
-.album {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+.home {
+  flex-direction: column;
 }
+
+/* .home-hero {
+  width: 100%;
+  height: calc(100% - var(--nav-height));
+} */
+
 
 .albums {
   width: 100%;

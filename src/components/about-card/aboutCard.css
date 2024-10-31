@@ -1,4 +1,28 @@
 .about-card {
+    /* height: 300px;
+    width: 420px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.about-card,h4 {
+    padding: 4px;
+}
+
+.about-card-description {
+    /* position: absolute; */
     height: 300px;
     width: 300px;
+    top: 500px;
+}
+
+.about-image {
+    /* position: absolute; */
+    top: 200px;
+    right: 320px;
+    height: 300px;
+    width: 120px;
+    object-fit: cover;
 }
