@@ -33,13 +33,23 @@ const Home = (props) => {
             </div>
                 {
                     props.albums ? props.albums.map((album, i) => (
-                        <ParallaxBanner className='parallax-banner' layers={[{image: `${process.env.REACT_APP_IMAGES_URL}/${album.files[0]}`, speed: 10}]}>
-                            {i % 2 === 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
-                            <Link key={album.url} to={`/album/${album.url}`}
-                                className="album-link"
-                            >
-                            </Link>
-                            {i % 2 !== 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
+                        <ParallaxBanner 
+                            className='parallax-banner' 
+                            layers={[
+                                {image: `${process.env.REACT_APP_IMAGES_URL}/${album.files[0]}`, speed: 10},
+                                {children: (
+                                    <div>
+                                        {i % 2 === 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
+                                        <Link key={album.url} to={`/album/${album.url}`}
+                                            className="album-link"
+                                        >
+                                        </Link>
+                                        {i % 2 !== 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
+                                    </div>
+                                ), speed: 10}
+                            ]}
+                        >
+
                         </ParallaxBanner>
                     )) : "Loading..."
                 }
