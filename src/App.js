@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import Album from "./pages/album/Album";
+import Albums from "./pages/albums/Albums";
 import Nav from "./pages/Nav";
 import "./app.css";
 import Admin from "./pages/admin/Admin";
@@ -53,13 +54,13 @@ function App() {
           {Object.keys(artist).length === 0 ? <Route path="/" element={"loading..."} /> :
             <Route path="/" element={<Nav artist={artist} settings={settings} />}>
               <Route index element={<Home albums={albums} settings={settings} />} />
-              <Route path="contact" element={<Contact artist={artist} settings={settings} />} />
+              <Route path="albums" element={<Albums artist={artist} settings={settings} />} />
               <Route path="about" element={<About artist={artist} settings={settings} />} />
               <Route path="admin" element={<Admin artist={artist} albums={albums} settings={settings} />} />
               {albums.map((album) => (
                 <Route
                   key={album.name + " route"}
-                  path={"/album/" + album.url}
+                  path={"/albums/" + album.url}
                   element={<Album album={album} settings={settings}/>}
                 />
               ))}

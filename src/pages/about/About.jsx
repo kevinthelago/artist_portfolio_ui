@@ -1,13 +1,35 @@
+import './about.css';
+import image from './N4A0631.CR2';
+
 const About = (props) => {
     return(
-        <div className='page gallery-theme'>
+        <div className='page about gallery-theme'>
             <div className="about-card">
-                <div className='about-card-description'>
-                    {props.artist.about.split("\n").map(text => <h4>{text}</h4>)}
-                </div>
                 <div className='about-card-image-wrapper'>
-                    <img className='about-image' alt='' src='https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600'/>
+                    <img className='about-image' alt='' src={image}/>
                 </div>
+                <div className='about-card-description'>
+                    {props.artist.about.split("\n").map(text => <h4 key={text}>{text}</h4>)}
+                </div>
+            </div>
+            <div className="contact-card">
+                <div className='contact-card-image'>
+
+                </div>
+                <div className='contact-card-email'>
+                    {props.artist.email}
+                </div>
+                <ul className='contact-card-icons'>
+                    {props.artist.links.map((link, i) => {
+                        return(
+                            <li key={link + i}>
+                                <a className='icon-small flexc' href={link}>
+                                    {/* <Icon link={link}/> */}
+                                </a>
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
         </div>
     )

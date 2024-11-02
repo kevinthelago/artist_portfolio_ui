@@ -15,16 +15,18 @@ const Layout = (props) => {
     <>
       <nav>
         <div className="nav-title">
-          <h1>
-            {props.artist.name}
-          </h1>
+          <Link onClick={(e) => handleClick(e)} to="/">
+            <h1>
+              {props.artist.name}
+            </h1>
+          </Link>
         </div>
         <ul ref={ref} className="nav-links">
           <li id="home" className="nav-link">
             <Link onClick={(e) => handleClick(e)} to="/">Home</Link>
           </li>
-          <li id="contact" className="nav-link">
-            <Link onClick={(e) => handleClick(e)} to="/contact">Contact</Link>
+          <li id="albums" className="nav-link">
+            <Link onClick={(e) => handleClick(e)} to="/albums">Albums</Link>
           </li>
           <li id="about" className="nav-link">
             <Link onClick={(e) => handleClick(e)} to="/about">About</Link>

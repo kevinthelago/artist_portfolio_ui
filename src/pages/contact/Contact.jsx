@@ -1,14 +1,17 @@
+import './contact.css';
+
+
 const Contact = (props) => (
-    <div className='page gallery-theme'>
+    <div className='page contact gallery-theme'>
         <div className="contact-card">
             <div className='contact-card-image'>
 
             </div>
             <div className='contact-card-email'>
-                {props.email}
+                {props.artist.email}
             </div>
             <ul className='contact-card-icons'>
-                {props.links.map((link, i) => {
+                {props.artist.links.map((link, i) => {
                     return(
                         <li key={link + i}>
                             <a className='icon-small flexc' href={link}>

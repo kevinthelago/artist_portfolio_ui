@@ -2,9 +2,34 @@
     flex-direction: column;
 }
 
+#home-background {
+    position: absolute;
+    background-position: cover;
+    /* top: 0; */
+    /* position: static; */
+    height: 200vh;
+    width: 100%;
+    /* z-index: 0; */
+    /* background-size: 100%; */
+    /* background-position: 50% 50%; */
+    animation: spin-spiral 3s infinite linear;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes spin-spiral {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .hero {
     height: calc(100vh - var(--nav-height));
     width: 100%;
+    z-index: 1;
     aspect-ratio: var(--portrait-aspect-ratio);
 }
 
@@ -17,12 +42,13 @@
 
 .albums-break {
     height: var(--nav-height);
-    width: 100%;
+    /* width: 100%; */
 }
 
 .album-link {
     display: flex;
     align-items: start;
+    justify-content: center;
     width: 100%;
     height: 100%;
     aspect-ratio: var(--portrait-aspect-ratio);
@@ -43,6 +69,7 @@
     .album-link {
         aspect-ratio: var(--landscape-aspect-ratio);
         align-items: center;
+        justify-content: start;
         /* background: linear-gradient(to right, rgba(255,255,255,0.8) 50%, transparent); */
         /* background-size: 300% 300%;
         background-position: 50% 0; */

@@ -1,4 +1,9 @@
+import { useEffect } from 'react';
 import './album.css';
+
+function scrollToTop() {
+    console.log("scroll")
+}
 
 const Album = (props) => {
     return(

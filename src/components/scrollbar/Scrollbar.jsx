@@ -5,33 +5,46 @@ const Scrollbar = (props) => {
     let [height, setHeight] = useState(0);
     let [opacity, setOpacity] = useState(0.0);
     let [position, setPosition] = useState(0);
-    let page;
-    let ratio;
-
-    setTimeout(() => {
-        const root = document.getElementById('root');
-        page = document.getElementById('page');
-        ratio = (root.clientHeight / page.offsetHeight);
-
-        let height = Math.round((root.clientHeight / page.offsetHeight) * root.clientHeight);
-        setHeight(height)
-        console.log(height)
-    }, 10, { setHeight })
-
-    // root.addEventListener("scroll", (event) => {console.log("add event listener")});
+    let [visible, setVisible] = useState(true);
+    let [fading, setFading] = useState(false);
+    let [root, setRoot] = useState({});
+    let [page, setPage] = useState({});
+    let [ratio, setRatio] = useState(0.0);
 
     useEffect(() => {
-        onscroll = () => { 
+        const targetRoot = document.getElementById('root');
+        const targetPage = document.getElementById('page');
+        setRoot(targetRoot);
+        setPage(targetPage);
+
+        let ratio = targetRoot.clientHeight / targetPage.offsetHeight;
+        setRatio(ratio);
+
+        let height = Math.round((targetRoot.clientHeight / targetPage.offsetHeight) * targetRoot.clientHeight);
+        setHeight(height)
+    }, [])
+
+    useEffect(() => {
+        onscroll = () => {
+            // if (!visible) {
+            //     setVisible(true)
+            // }
             const y = Math.abs(page.getBoundingClientRect().y);
+            // console.log(y)
             const position = Math.round(y + (ratio * y));
+            // console.log(position)
             setPosition(position + 'px');
             setOpacity(.4);
-            setTimeout(() => {
-                setOpacity(0)
-            }, 3000)
-            console.log(position);
+            if (visible) {
+                setTimeout(() => {
+                    setOpacity(0);
+                    // setFading(true);
+                    setVisible(false);
+                }, 3000)
+            }
+            // console.log(position);
         };
-    }, [ setPosition, page, ratio ])
+    }, [setPosition, page, ratio, visible, setVisible, fading, setFading])
 
     return (
         <div

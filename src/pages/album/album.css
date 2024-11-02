@@ -1,18 +1,21 @@
 .albums {
+    padding-top: var(--nav-height);
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2fr);
     overflow-y: auto;
 }
 
 .piece {
     grid-row: span 1;
     grid-column: span 1;
-    height: 100vh;
+    height: 600px;
     width: 100%;
     background-size: cover !important;
+    margin: 8px;
+    overflow: hidden;
     background-position: center;
     /* margin: 8px; */
 }

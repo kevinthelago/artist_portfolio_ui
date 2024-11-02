@@ -9,6 +9,7 @@ h1 {
 }
 
 nav {
+  z-index: 100;
   position: absolute;
   height: var(--nav-height);
   width: 100%;
@@ -41,7 +42,7 @@ li>a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--primary-background-color);
+  /* background-color: var(--primary-background-color); */
   /* overflow: auto;
   height: 100%; */
 }
