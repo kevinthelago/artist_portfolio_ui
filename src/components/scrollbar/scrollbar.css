@@ -1,0 +1,6 @@
+#scrollbar {
+    position: absolute;
+    right: 0;
+    margin: 4px;
+    /* transition: 0.1s; */
+}

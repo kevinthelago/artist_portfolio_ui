@@ -41,9 +41,9 @@ code {
   --landscape-aspect-ratio: 16 / 9;
   --portrait-aspect-ratio: 9 / 14;
 
-  --scrollbar-width: 3px;
+  --scrollbar-width: 8px;
   --scrollbar-transition: 0.3s;
-  --scrollbar-track-color: rgb(0, 0, 0, 0.3);
+  --scrollbar-track-color: transparent;
   --scrollbar-thumb-color: rgb(0, 0, 0, 0.7);
   --scrollbar-thumb-color-hover: rgba(0, 0, 0, 1);
 

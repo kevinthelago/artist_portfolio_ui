@@ -9,10 +9,12 @@ h1 {
 }
 
 nav {
+  position: absolute;
   height: var(--nav-height);
+  width: 100%;
   padding-left: var(--nav-side-padding);
   padding-right: var(--nav-side-padding);
-  background: var(--primary-background-color);
+  /* background: var(--primary-background-color); */
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -40,30 +42,13 @@ li>a {
   align-items: center;
   justify-content: center;
   background-color: var(--primary-background-color);
+  /* overflow: auto;
+  height: 100%; */
 }
 
-/* width */
-html::-webkit-scrollbar {
-  display: none;
-  width: var(--scrollbar-width);
-  transition: var(--transition-speed);
-}
-
-/* Track */
-html::-webkit-scrollbar-track {
-  background: var(scrollbar-track-color);
-}
-
-/* Handle */
-html::-webkit-scrollbar-thumb {
-  background: var(scrollbar-thumb-color);
-  border-radius: 3px;
-  transition: .3s;
-}
-
-/* Handle on hover */
-html::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-color-hover);
+html {
+  /* width: calc(100% + var(--scrollbar-width)); */
+  scrollbar-width: none;
 }
 
 .nav-title {
@@ -90,7 +75,7 @@ html::-webkit-scrollbar-thumb:hover {
   /* display: none; */
   overflow: hidden;
   position: absolute;
-  background-color: var(--primary-background-color);
+  /* background-color: var(--primary-background-color); */
   bottom: 0;
   height: calc(100% - var(--nav-height));
   width: 0%;

@@ -3,10 +3,10 @@ import './album.css';
 const Album = (props) => {
     return(
         <div className={`page ${props.settings.theme}-theme`}>
-            <div className='album'>
+            <div className='albums'>
                 {props.album.files.map((filename, i) => (
                     <div className='piece' style={{
-                        background: `url(${process.env.REACT_APP_IMAGES_URL}/${filename})`
+                        background: `url(${process.env.REACT_APP_IMAGES_URL}/${filename}) no-repeat`
                     }}>
                 
                     </div>
