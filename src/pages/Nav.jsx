@@ -11,11 +11,12 @@ const Layout = (props) => {
   }
 
   return (
+    props.artist ?
     <>
       <nav>
         <div className="nav-title">
           <h1>
-            {props.name}
+            {props.artist.name}
           </h1>
         </div>
         <ul ref={ref} className="nav-links">
@@ -36,6 +37,7 @@ const Layout = (props) => {
 
       <Outlet />
     </>
+    : ""
   )
 };
 

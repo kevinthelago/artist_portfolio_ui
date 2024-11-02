@@ -1,8 +1,24 @@
-// import ContactCard from '../components/contact-card/ContactCard';
-
 const Contact = (props) => (
     <div className='page gallery-theme'>
-        {/* <ContactCard email={props.artist.email} links={props.artist.links}/> */}
+        <div className="contact-card">
+            <div className='contact-card-image'>
+
+            </div>
+            <div className='contact-card-email'>
+                {props.email}
+            </div>
+            <ul className='contact-card-icons'>
+                {props.links.map((link, i) => {
+                    return(
+                        <li key={link + i}>
+                            <a className='icon-small flexc' href={link}>
+                                {/* <Icon link={link}/> */}
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
     </div>
 )
 

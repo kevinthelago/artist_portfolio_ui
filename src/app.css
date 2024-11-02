@@ -12,6 +12,7 @@ nav {
   height: var(--nav-height);
   padding-left: var(--nav-side-padding);
   padding-right: var(--nav-side-padding);
+  background: var(--primary-background-color);
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -38,48 +39,31 @@ li>a {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: calc(100% - var(--nav-height)); */
-}
-
-.home {
-  flex-direction: column;
-}
-
-/* .home-hero {
-  width: 100%;
-  height: calc(100% - var(--nav-height));
-} */
-
-
-.albums {
-  width: 100%;
-  height: 100%;
-  flex-wrap: wrap;
-  overflow: auto;
+  background-color: var(--primary-background-color);
 }
 
 /* width */
-.albums::-webkit-scrollbar {
-  /* display: none; */
-  width: 6px;
-  transition: .3s;
+html::-webkit-scrollbar {
+  display: none;
+  width: var(--scrollbar-width);
+  transition: var(--transition-speed);
 }
 
 /* Track */
-.albums::-webkit-scrollbar-track {
-  background: transparent;
+html::-webkit-scrollbar-track {
+  background: var(scrollbar-track-color);
 }
 
 /* Handle */
-.albums::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, .7);
+html::-webkit-scrollbar-thumb {
+  background: var(scrollbar-thumb-color);
   border-radius: 3px;
   transition: .3s;
 }
 
 /* Handle on hover */
-.albums::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 1);
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-color-hover);
 }
 
 .nav-title {
@@ -101,33 +85,12 @@ li>a {
   border-bottom: solid 2px black;
 }
 
-.icon-small {
-  height: 24px;
-  width: 24px;
-}
-
-.icon-medium {
-  height: 36px;
-  width: 36px;
-}
-
-.icon-large {
-  height: 48px;
-  width: 48px;
-}
-
-.flexc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .nav-links {
   z-index: 1;
   /* display: none; */
   overflow: hidden;
   position: absolute;
-  background-color: white;
+  background-color: var(--primary-background-color);
   bottom: 0;
   height: calc(100% - var(--nav-height));
   width: 0%;
@@ -153,6 +116,27 @@ li>a {
   transition: .3s;
   height: var(--icon-medium);
   width: var(--icon-medium);
+}
+
+.icon-small {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-medium {
+  height: 36px;
+  width: 36px;
+}
+
+.icon-large {
+  height: 48px;
+  width: 48px;
+}
+
+.flexc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 600px) {

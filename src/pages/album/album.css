@@ -1,0 +1,11 @@
+.album {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.piece {
+    height: 240px;
+    width: 240px;
+    background-size: contain !important;
+    margin: 8px;
+}

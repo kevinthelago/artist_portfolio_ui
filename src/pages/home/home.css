@@ -1,21 +1,17 @@
+.home {
+    flex-direction: column;
+}
+
 .hero {
-    /* height: 600px; */
+    height: calc(100% - var(--nav-height));
     width: 100%;
-    /* background-color: red; */
-    aspect-ratio: 9 / 14;
+    aspect-ratio: var(--portrait-landscape-ratio);
 }
 
 .hero>video {
     height: 100%;
     width: 100%;
-    object-fit: contain;
-}
-
-.hero>.overlay {
-    position: absolute;
-    aspect-ratio: 9 / 14;
-    width: 100%;
-    background-color: linear-gradient(blue, red);
+    object-fit: fit;
 }
 
 .albums-break {
@@ -25,45 +21,49 @@
 
 .album-link {
     position: absolute;
-    z-index: 100;
-    width: 50%;
-    height: 100%;
-    aspect-ratio: 9 / 14;
+    width: 100%;
+    /* height: 100%; */
+    aspect-ratio: var(--portrait-landscape-ratio);
     background: linear-gradient(to right, white, transparent);
+    background-size: 300% 300%;
+    background-position: 50% 0;
+    transition: var(--transition-speed);
 }
 
-.album-description {
+.album-link:hover {
+    background-position: 100% 0;
+}
+
+.album-title {
     position: absolute;
-    z-index: 100;
     width: 100%;
     height: 100%;
-    /* aspect-ratio: 16 / 9; */
-    /* background-color: red; */
+    text-align: center;
 }
 
 .parallax-banner {
     width: 100%;
-    aspect-ratio: 9 / 14;
+    aspect-ratio: var(--portrait-landscape-ratio);
 }
 
 @media screen and (min-width: 600px) {
     .hero {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: var(--landscape-aspect-ratio);
     }
 
     .album-link {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: var(--landscape-aspect-ratio);
     }
 
     .album-description {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: var(--landscape-aspect-ratio);
     }
 
     .hero>.overlay {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: var(--landscape-aspect-ratio);
     }
 
     .parallax-banner {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: var(--landscape-aspect-ratio);
     }
 }
