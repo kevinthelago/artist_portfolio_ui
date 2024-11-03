@@ -40,7 +40,7 @@
     object-position: left;
 }
 
-.albums-break {
+.album-break {
     height: var(--nav-height);
     /* width: 100%; */
 }

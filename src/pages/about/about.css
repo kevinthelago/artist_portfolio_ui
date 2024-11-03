@@ -1,12 +1,43 @@
 .about {
-    height: 100%;
+    padding-top: var(--nav-height);
+    height: calc(100% - var(--nav-height));
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.about-card {
-    width: 50%;
+.about-wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-card {
+    /* width: 50%; */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.about-card-image-wrapper {
+    height: 300px;
+    aspect-ratio: 3670/5496;
+    /* width: 100%; */
+    background-position: contain;
+}
+
+.about-image {
+    height: 300px;
+    background-position: contain;
+}
+
+.description-card {
+    width: 300px;
+    padding: 8px;
+}
+
+.description-card-text>h4 {
+    padding: 8px;
 }

@@ -1,4 +1,4 @@
-.albums {
+.album-pieces {
     padding-top: var(--nav-height);
     height: 100%;
     width: 100%;
@@ -8,14 +8,20 @@
     overflow-y: auto;
 }
 
-.piece {
+.album-piece {
     grid-row: span 1;
     grid-column: span 1;
     height: 600px;
     width: 100%;
     background-size: cover !important;
-    margin: 8px;
-    overflow: hidden;
     background-position: center;
-    /* margin: 8px; */
+    margin: 8px;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+}
+
+.album-title {
+    position: absolute;
+    top: var(--nav-height);
+    /* padding-top: var(--nav-height); */
 }
