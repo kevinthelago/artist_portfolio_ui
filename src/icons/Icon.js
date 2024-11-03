@@ -1,6 +1,5 @@
 const Icon = (props) => {
   const host = new URL(props.link).host;
-  console.log(host)
 
   switch (host) {
     case "www.instagram.com":

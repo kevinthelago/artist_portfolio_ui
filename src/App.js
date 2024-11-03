@@ -12,66 +12,68 @@ import "./app.css";
 import Loading from "./pages/loading/Loading";
 
 function App() {
-  let [settings, setSettings] = useState({
-    theme: "gallery"
-  })
-  let [artist, setArtist] = useState({});
-  let [albums, setAlbums] = useState([]);
+    let [settings, setSettings] = useState({
+        theme: "gallery"
+    })
+    let [artist, setArtist] = useState({});
+    let [albums, setAlbums] = useState([]);
 
-  useEffect(() => {
-    fetch(
-      process.env.REACT_APP_ALUMBS_URL + process.env.REACT_APP_ARTIST_UUID
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setAlbums(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            await fetch(
+                process.env.REACT_APP_ALUMBS_URL + process.env.REACT_APP_ARTIST_UUID
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setAlbums(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+        fetchData();
+    }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetch(
-        process.env.REACT_APP_ARTISTS_URL + process.env.REACT_APP_ARTIST_UUID
-      )
-        .then((response) => response.json())
-        .then((data) => {
-         setTimeout(() => {setArtist(data); console.log("here")}, 1000)
-          // setArtist(data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
-    fetchData();
-  }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            await fetch(
+                process.env.REACT_APP_ARTISTS_URL + process.env.REACT_APP_ARTIST_UUID
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    setArtist(data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        };
+        fetchData();
+    }, []);
 
-  return (
-    <ParallaxProvider>
-      <BrowserRouter> 
-        <Routes>
-          {Object.keys(artist).length === 0 ? <Route path="/" element={<Loading />} /> :
-            <Route path="/" element={<Nav artist={artist} settings={settings} />}>
-              <Route index element={<Home albums={albums} settings={settings} />} />
-              <Route path="albums" element={<Albums albums={albums} settings={settings} />} />
-              <Route path="about" element={<About artist={artist} settings={settings} />} />
-              <Route path="admin" element={<Admin artist={artist} albums={albums} settings={settings} />} />
-              {albums.map((album) => (
-                <Route
-                  key={album.name + " route"}
-                  path={"/albums/" + album.url}
-                  element={<Album album={album} settings={settings}/>}
-                />
-              ))}
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          }
-        </Routes>
-      </BrowserRouter>
-    </ParallaxProvider>
-  );
+    return (
+        <ParallaxProvider>
+            <BrowserRouter>
+                <Routes>
+                    {Object.keys(artist).length === 0 ? <Route path="/" element={<Loading />} /> :
+                        <Route path="/" element={<Nav artist={artist} settings={settings} />}>
+                            <Route index element={<Home artist={artist} albums={albums} settings={settings} />} />
+                            <Route path="/albums" element={<Albums artist={artist} albums={albums} settings={settings} />} />
+                            <Route path="/about" element={<About artist={artist} settings={settings} />} />
+                            <Route path="/admin" element={<Admin artist={artist} albums={albums} settings={settings} />} />
+                            {albums.map((album) => (
+                                <Route
+                                    key={album.name + " route"}
+                                    path={"/albums/" + album.url}
+                                    element={<Album artist={artist} album={album} settings={settings} />}
+                                />
+                            ))}
+                            <Route path="*" element={<NotFound artist={artist} />} />
+                        </Route>
+                    }
+                </Routes>
+            </BrowserRouter>
+        </ParallaxProvider>
+    );
 }
 
 export default App;

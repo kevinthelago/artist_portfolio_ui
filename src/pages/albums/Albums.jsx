@@ -2,7 +2,7 @@ import AlbumParallaxBanner from '../../components/album_parallax_banner/AlbumPar
 import Footer from '../../components/footer/Footer';
 import './albums.css';
 
-const Albums = ({albums, settings}) => {
+const Albums = ({artist, albums, settings}) => {
     return(
         <div className="page albums">
             {albums.map((album, i) => (
@@ -11,7 +11,7 @@ const Albums = ({albums, settings}) => {
                         {i !== albums.length - 1 ? <div key={"albums-album-break-" + i} className="album-break"></div> : <></>}
                     </>
                 ))}
-            <Footer />
+            <Footer artist={artist} />
         </div>
     )
 }

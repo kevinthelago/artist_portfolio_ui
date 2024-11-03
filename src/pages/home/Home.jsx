@@ -1,3 +1,4 @@
+import { ParallaxProvider } from "react-scroll-parallax";
 import AlbumParallaxBanner from "../../components/album_parallax_banner/AlbumParallaxBanner";
 import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/Scrollbar";
@@ -5,7 +6,7 @@ import video from "./IMG_5829.MOV";
 import "./home.css";
 
 
-const Home = ({ albums, settings }) => {
+const Home = ({ artist, albums, settings }) => {
     return (
         <>
             <div id="page" className={`home page ${settings.theme}-theme`}>
@@ -17,12 +18,9 @@ const Home = ({ albums, settings }) => {
                 </div>
                 <div className="album-break"></div>
                 {albums.map((album, i) => (
-                    <>
-                        <AlbumParallaxBanner key={album.uuid} album={album} direction={i % 2 === 0} />
-                        {i !== albums.length - 1 ? <div key={"break-" + i} className="album-break"></div> : <></>}
-                    </>
+                    <AlbumParallaxBanner key={album.uuid} album={album} direction={i % 2 === 0} end={i === albums.length - 1} />
                 ))}
-                <Footer />
+                <Footer artist={artist}/>
             </div>
             <Scrollbar />
         </>
