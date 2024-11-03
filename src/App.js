@@ -8,8 +8,8 @@ import Albums from "./pages/albums/Albums";
 import Nav from "./pages/Nav";
 import Admin from "./pages/admin/Admin";
 import NotFound from "./pages/not_found/NotFound";
-import "./app.css";
 import Loading from "./pages/loading/Loading";
+import "./app.css";
 
 function App() {
     let [settings, setSettings] = useState({

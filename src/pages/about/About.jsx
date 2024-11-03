@@ -24,7 +24,7 @@ const About = ({artist, settings}) => {
                         {artist.links.map((link, i) => {
                             return (
                                 <li key={link + i}>
-                                    <a className='icon-small flexc' href={link}>
+                                    <a className='icon-24 flexc' href={link}>
                                         <Icon link={link}/>
                                     </a>
                                 </li>

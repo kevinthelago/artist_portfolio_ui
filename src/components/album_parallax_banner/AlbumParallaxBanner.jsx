@@ -15,7 +15,6 @@ const AlbumParallaxBanner = ({ album, direction, end }) => {
                     {
                         children: (
                             <Link
-                                key={album.url}
                                 to={`/albums/${album.url}`}
                                 className={`album-link ${direction ? "album-link-left" : "album-link-right"
                                     }`}

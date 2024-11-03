@@ -1,22 +1,22 @@
 import Footer from '../../components/footer/Footer';
 import './album.css';
 
-const Album = (props) => {
+const Album = ({artist, album, settings}) => {
     return(
-        <div className={`page ${props.settings.theme}-theme`}>
+        <div className={`page ${settings.theme}-theme`}>
             <div className='album-title'>
-                {props.album.name}
+                {album.name}
             </div>
             <div className='album-pieces'>
-                {props.album.files.map((filename, i) => (
-                    <div className='album-piece' style={{
+                {album.files.map((filename, i) => (
+                    <div key={filename} className='album-piece' style={{
                         backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${filename})`
                     }}>
                 
                     </div>
                 ))}
             </div>
-            <Footer />
+            <Footer artist={artist}/>
         </div>
     )
 }

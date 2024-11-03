@@ -105,19 +105,19 @@ html {
   width: var(--icon-medium);
 }
 
-.icon-small {
+.icon-24 {
   height: 24px;
   width: 24px;
 }
 
-.icon-medium {
-  height: 36px;
-  width: 36px;
+.icon-28 {
+  height: 28px;
+  width: 28px;
 }
 
-.icon-large {
-  height: 48px;
-  width: 48px;
+.icon-32 {
+  height: 32px;
+  width: 32px;
 }
 
 .flexc {
