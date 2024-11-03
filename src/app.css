@@ -15,7 +15,7 @@ nav {
   width: 100%;
   padding-left: var(--nav-side-padding);
   padding-right: var(--nav-side-padding);
-  /* background: var(--primary-background-color); */
+  background: var(--ui-primary-background-color);
   display: flex !important;
   justify-content: center;
   align-items: center;

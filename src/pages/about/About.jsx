@@ -1,3 +1,4 @@
+import Footer from '../../components/footer/Footer';
 import Icon from '../../icons/Icon';
 import './about.css';
 
@@ -32,6 +33,7 @@ const About = (props) => {
                     </ul>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

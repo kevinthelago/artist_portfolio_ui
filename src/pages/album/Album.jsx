@@ -1,3 +1,4 @@
+import Footer from '../../components/footer/Footer';
 import './album.css';
 
 const Album = (props) => {
@@ -15,6 +16,7 @@ const Album = (props) => {
                     </div>
                 ))}
             </div>
+            <Footer />
         </div>
     )
 }

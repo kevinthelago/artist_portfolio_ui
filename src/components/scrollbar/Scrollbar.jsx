@@ -27,7 +27,7 @@ const Scrollbar = (props) => {
     useEffect(() => {
         onscroll = () => {
             const y = Math.abs(page.getBoundingClientRect().y);
-            const position = Math.round(y + (ratio * y));
+            const position = Math.round(y + (ratio * y)) - 10;
             setPosition(position + 'px');
             setOpacity(.4);
             if (visible) {

@@ -1,0 +1,6 @@
+.footer {
+    height: 300px;
+    width: 100%;
+    background: var(--ui-primary-background-color);
+    /* background: black; */
+}

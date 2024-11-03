@@ -1,4 +1,5 @@
 import AlbumParallaxBanner from '../../components/album_parallax_banner/AlbumParallaxBanner';
+import Footer from '../../components/footer/Footer';
 import './albums.css';
 
 const Albums = ({albums, settings}) => {
@@ -10,6 +11,7 @@ const Albums = ({albums, settings}) => {
                         {i !== albums.length - 1 ? <div key={"albums-album-break-" + i} className="album-break"></div> : <></>}
                     </>
                 ))}
+            <Footer />
         </div>
     )
 }

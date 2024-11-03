@@ -1,4 +1,5 @@
 import AlbumParallaxBanner from "../../components/album_parallax_banner/AlbumParallaxBanner";
+import Footer from "../../components/footer/Footer";
 import Scrollbar from "../../components/scrollbar/Scrollbar";
 import video from "./IMG_5829.MOV";
 import "./home.css";
@@ -21,6 +22,7 @@ const Home = ({ albums, settings }) => {
                         {i !== albums.length - 1 ? <div key={"break-" + i} className="album-break"></div> : <></>}
                     </>
                 ))}
+                <Footer />
             </div>
             <Scrollbar />
         </>

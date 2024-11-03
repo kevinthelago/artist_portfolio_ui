@@ -6,8 +6,10 @@ import About from "./pages/about/About";
 import Album from "./pages/album/Album";
 import Albums from "./pages/albums/Albums";
 import Nav from "./pages/Nav";
-import "./app.css";
 import Admin from "./pages/admin/Admin";
+import NotFound from "./pages/not_found/NotFound";
+import "./app.css";
+import Loading from "./pages/loading/Loading";
 
 function App() {
   let [settings, setSettings] = useState({
@@ -50,7 +52,7 @@ function App() {
     <ParallaxProvider>
       <BrowserRouter> 
         <Routes>
-          {Object.keys(artist).length === 0 ? <Route path="/" element={"loading..."} /> :
+          {Object.keys(artist).length === 0 ? <Route path="/" element={<Loading />} /> :
             <Route path="/" element={<Nav artist={artist} settings={settings} />}>
               <Route index element={<Home albums={albums} settings={settings} />} />
               <Route path="albums" element={<Albums albums={albums} settings={settings} />} />
@@ -63,6 +65,7 @@ function App() {
                   element={<Album album={album} settings={settings}/>}
                 />
               ))}
+              <Route path="*" element={<NotFound />} />
             </Route>
           }
         </Routes>

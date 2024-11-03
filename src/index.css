@@ -15,6 +15,7 @@ code {
 :root, .gallery-theme {
   --primary-text-color: var(--black);
   --primary-background-color: var(--white);
+  --ui-primary-background-color: rgba(150,150,150,0.3);
 }
 
 /* :root, .fun-theme {
