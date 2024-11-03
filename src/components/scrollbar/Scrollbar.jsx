@@ -26,23 +26,16 @@ const Scrollbar = (props) => {
 
     useEffect(() => {
         onscroll = () => {
-            // if (!visible) {
-            //     setVisible(true)
-            // }
             const y = Math.abs(page.getBoundingClientRect().y);
-            // console.log(y)
             const position = Math.round(y + (ratio * y));
-            // console.log(position)
             setPosition(position + 'px');
             setOpacity(.4);
             if (visible) {
                 setTimeout(() => {
                     setOpacity(0);
-                    // setFading(true);
                     setVisible(false);
                 }, 3000)
             }
-            // console.log(position);
         };
     }, [setPosition, page, ratio, visible, setVisible, fading, setFading])
 

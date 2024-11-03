@@ -5,15 +5,9 @@
 #home-background {
     position: absolute;
     background-position: cover;
-    /* top: 0; */
-    /* position: static; */
     height: 200vh;
     width: 100%;
-    /* z-index: 0; */
-    /* background-size: 100%; */
-    /* background-position: 50% 50%; */
     animation: spin-spiral 3s infinite linear;
-    /* animation-iteration-count: infinite; */
 }
 
 @keyframes spin-spiral {
@@ -42,7 +36,6 @@
 
 .album-break {
     height: var(--nav-height);
-    /* width: 100%; */
 }
 
 .album-link {

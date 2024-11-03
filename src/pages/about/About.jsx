@@ -1,5 +1,5 @@
+import Icon from '../../icons/Icon';
 import './about.css';
-import image from './N4A0631.png';
 
 const About = (props) => {
     return(
@@ -7,10 +7,12 @@ const About = (props) => {
             <div className="about-wrapper">
                 <div className="about-card">
                     <div className='about-card-image-wrapper'>
-                        <img className='about-image' alt='' src={image} />
+                        <img className='about-image' alt='' src={`${process.env.REACT_APP_IMAGES_URL}${props.artist.image}`} />
                     </div>
                     <div className='about-card-email'>
-                        {props.artist.email}
+                        <h2>
+                            {props.artist.email}
+                        </h2>
                     </div>
                 </div>
                 <div className="description-card">
@@ -22,7 +24,7 @@ const About = (props) => {
                             return (
                                 <li key={link + i}>
                                     <a className='icon-small flexc' href={link}>
-                                        {/* <Icon link={link}/> */}
+                                        <Icon link={link}/>
                                     </a>
                                 </li>
                             )
