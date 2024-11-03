@@ -12,9 +12,9 @@ const Footer = ({ artist, settings }) => {
             <div className='footer-social-media-icons'>
                 {
                     artist.links.map((link) => (
-                        <div key={`footer-${link}-link`} className='footer-social-media-icon icon-28'>
+                        <a key={`footer-${link}-link`} className='footer-social-media-icon icon-28' href={link}>
                             <Icon link={link} />
-                        </div>
+                        </a>
                     ))
                 }
             </div>
