@@ -1,0 +1,7 @@
+.albums {
+    /* height: 100%; */
+    /* position: absolute; */
+    padding-top: var(--nav-height);
+    /* top: var(--nav-height); */
+    flex-direction: column;   
+}

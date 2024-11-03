@@ -1,24 +1,30 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 :root, .gallery-theme {
   --primary-text-color: var(--black);
   --primary-background-color: var(--white);
+  --ui-primary-background-color: rgba(150,150,150,0.3);
 }
 
+/* :root, .fun-theme {
+  --primary-text-color: purple;
+  --primary-background-color: black;
+} */
+
 :root {
-  --font-family: 'roboto';
+  --font-family: "roboto";
   --h1-font-size: 3em;
   --h2-font-size: 2.5em;
   --h3-font-size: 2em;
@@ -31,7 +37,18 @@ code {
 
   --nav-height: 4em;
 
-  --li-side-padding: .2em;
+  --li-side-padding: 0.2em;
+
+  --landscape-aspect-ratio: 16 / 9;
+  --portrait-aspect-ratio: 9 / 14;
+
+  --scrollbar-width: 8px;
+  --scrollbar-transition: 0.3s;
+  --scrollbar-track-color: transparent;
+  --scrollbar-thumb-color: rgb(0, 0, 0, 0.7);
+  --scrollbar-thumb-color-hover: rgba(0, 0, 0, 1);
+
+  --transition-speed: 0.3s;
 
   --black: rgb(0, 0, 0);
   --white: rgb(255, 255, 255);

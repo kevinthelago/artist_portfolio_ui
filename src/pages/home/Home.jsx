@@ -1,66 +1,28 @@
-import AlbumCover from '../../components/album-cover/AlbumCover';
-import { Link } from 'react-router-dom';
-import { ParallaxBanner } from 'react-scroll-parallax';
-import video from './IMG_5829.MOV';
-import './home.css';
-import { useEffect } from 'react';
+import AlbumParallaxBanner from "../../components/album_parallax_banner/AlbumParallaxBanner";
+import Footer from "../../components/footer/Footer";
+import Scrollbar from "../../components/scrollbar/Scrollbar";
+import video from "./IMG_5829.MOV";
+import "./home.css";
 
-const AlbumDescription = (props) => (
-    <div className='album-description'>
-        <div className='text'>
-            {props.album.name}
-        </div>
-    </div>
-)
 
-const Home = (props) => {
-    useEffect(() => {
-        document.getElementById("home-hero-video").play();
-    })
-
-    return(
-        <div className='home page gallery-theme'>
-            <div id='home-hero' className='hero'>
-                <div className='overlay'>
-
+const Home = ({ artist, albums, settings }) => {
+    return (
+        <>
+            <div id="page" className={`home page ${settings.theme}-theme`}>
+                {/* <div id="home-background" style={{background: `url(${background}) no-repeat center`, top: backgroundPosition}}></div> */}
+                <div id="home-hero" className="hero">
+                    <video id="home-hero-video" loop autoPlay muted playsInline>
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
-                <video id='home-hero-video' loop autoPlay muted>
-                    <source src={video} type='video/mp4'/>
-                </video>
+                <div className="album-break"></div>
+                {albums.map((album, i) => (
+                    <AlbumParallaxBanner key={album.uuid} album={album} direction={i % 2 === 0} end={i === albums.length - 1} />
+                ))}
+                <Footer artist={artist}/>
             </div>
-            <div className='albums-break'>
-
-            </div>
-                {
-                    props.albums ? props.albums.map((album, i) => (
-                        <ParallaxBanner 
-                            className='parallax-banner' 
-                            layers={[
-                                {image: `${process.env.REACT_APP_IMAGES_URL}/${album.files[0]}`, speed: 10},
-                                {children: (
-                                    <div>
-                                        {i % 2 === 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
-                                        <Link key={album.url} to={`/album/${album.url}`}
-                                            className="album-link"
-                                        >
-                                        </Link>
-                                        {i % 2 !== 0 ? <AlbumDescription key={album.name} album={album} /> : ""}
-                                    </div>
-                                ), speed: 10}
-                            ]}
-                        >
-
-                        </ParallaxBanner>
-                    )) : "Loading..."
-                }
-            {/* <div className='albums flexc'>
-                {
-                    props.albums ? props.albums.map((album, i) => 
-                        <AlbumCover key={`album ${i}`} album={album}/>
-                    ) : ""
-                }
-            </div> */}
-        </div>
+            <Scrollbar />
+        </>
     )
 };
 

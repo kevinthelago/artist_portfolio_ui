@@ -1,0 +1,23 @@
+.footer {
+    height: 128px;
+    width: 100%;
+    background: var(--ui-primary-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: black; */
+}
+
+.footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-media-icons {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,15 +1,22 @@
-import Piece from '../../components/piece/Piece';
+import Footer from '../../components/footer/Footer';
+import './album.css';
 
-const Album = (props) => {
+const Album = ({artist, album, settings}) => {
     return(
-        <div className='page gallery-theme'>
-            <div className='album'>
-                {
-                    props.album.files.map((filename, i) => {
-                        return <Piece key={`image-${i}`} filename={filename}/>
-                    })
-                }
+        <div className={`page ${settings.theme}-theme`}>
+            <div className='album-title'>
+                {album.name}
             </div>
+            <div className='album-pieces'>
+                {album.files.map((filename, i) => (
+                    <div key={filename} className='album-piece' style={{
+                        backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${filename})`
+                    }}>
+                
+                    </div>
+                ))}
+            </div>
+            <Footer artist={artist}/>
         </div>
     )
 }

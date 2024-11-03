@@ -1,0 +1,52 @@
+.about {
+    padding-top: var(--nav-height);
+    height: calc(100% - var(--nav-height));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about-card {
+    /* width: 50%; */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.about-card-image-wrapper {
+    height: 300px;
+    aspect-ratio: 3670/5496;
+    /* width: 100%; */
+    background-position: contain;
+}
+
+.about-image {
+    height: 300px;
+    background-position: contain;
+}
+
+.about-card-email {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-card {
+    width: 300px;
+    padding: 8px;
+}
+
+.description-card-text>h4 {
+    padding: 8px;
+}
