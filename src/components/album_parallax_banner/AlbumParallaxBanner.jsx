@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { ParallaxBanner } from "react-scroll-parallax";
 import "./albumParallaxBanner.css";
 
-const AlbumParallaxBanner = ({ album, direction, end }) => {
+const AlbumParallaxBanner = ({ artist, album, direction, end }) => {
     return (
         <>
             <ParallaxBanner
                 className="parallax-banner"
                 layers={[
                     {
-                        image: `${process.env.REACT_APP_IMAGES_URL}${album.files[0]}`,
+                        image: `${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${album.files[0]}`,
                         speed: 50,
                     },
                     {

@@ -17,7 +17,7 @@ const Home = ({ artist, albums, settings }) => {
                 </div>
                 <div className="album-break"></div>
                 {albums.map((album, i) => (
-                    <AlbumParallaxBanner key={album.uuid} album={album} direction={i % 2 === 0} end={i === albums.length - 1} />
+                    <AlbumParallaxBanner key={album.uuid} artist={artist} album={album} direction={i % 2 === 0} end={i === albums.length - 1} />
                 ))}
                 <Footer artist={artist}/>
             </div>

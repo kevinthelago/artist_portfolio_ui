@@ -8,7 +8,7 @@ const About = ({artist, settings}) => {
             <div className="about-wrapper">
                 <div className="about-card">
                     <div className='about-card-image-wrapper'>
-                        <img className='about-image' alt='' src={`${process.env.REACT_APP_IMAGES_URL}${artist.image}`} />
+                        <img className='about-image' alt='' src={`${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${artist.image}`} />
                     </div>
                 </div>
                 <div className="description-card">
