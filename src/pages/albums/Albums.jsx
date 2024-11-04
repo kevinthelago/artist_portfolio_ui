@@ -6,7 +6,7 @@ const Albums = ({ artist, albums, settings }) => {
     return (
         <div className="page albums">
             {albums.map((album, i) => (
-                <AlbumParallaxBanner key={"albums-album-parallax-banner-" + i} album={album} direction={i % 2 !== 0} end={i === albums.length - 1} />
+                <AlbumParallaxBanner key={"albums-album-parallax-banner-" + i} artist={artist} album={album} direction={i % 2 !== 0} end={i === albums.length - 1} />
             ))}
             <Footer artist={artist} />
         </div>
