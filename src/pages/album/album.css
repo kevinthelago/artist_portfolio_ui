@@ -1,5 +1,5 @@
 .album-pieces {
-    padding-top: var(--nav-height);
+    /* padding-top: var(--nav-height); */
     height: 100%;
     width: 100%;
     display: grid;
@@ -16,12 +16,17 @@
     background-size: cover !important;
     background-position: center;
     margin: 8px;
+    overflow: hidden;
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 
 .album-title {
-    position: absolute;
-    top: var(--nav-height);
+    /* position: absolute; */
+    padding-top: var(--nav-height);
+    height: var(--nav-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* padding-top: var(--nav-height); */
 }

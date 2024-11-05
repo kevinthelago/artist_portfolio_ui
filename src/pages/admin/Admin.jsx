@@ -1,4 +1,4 @@
-const Admin = (props) => {
+const Admin = ({artist, albums, settings}) => {
     function uploadImages(event) {
         console.log(event)
     }
