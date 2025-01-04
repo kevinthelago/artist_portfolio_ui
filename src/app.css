@@ -126,6 +126,7 @@ html {
 
 @media screen and (min-width: 600px) {
   .nav-links {
+    background-color: transparent;
     width: 50% !important;
     height: 100%;
     position: initial;
