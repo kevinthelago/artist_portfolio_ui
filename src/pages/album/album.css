@@ -1,6 +1,6 @@
 .album-pieces {
-    padding-top: var(--nav-height);
-    height: 100%;
+    padding-top: calc(var(--nav-height) + 1em);
+    height: calc(100% - var(--nav-height) - 1em);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -8,20 +8,24 @@
     overflow-y: auto;
 }
 
-.album-piece {
+.album-piece-wrapper {
     grid-row: span 1;
     grid-column: span 1;
     height: 600px;
     width: 100%;
+}
+
+.album-piece {
+    height: 100%;
+    width: 100%;
     background-size: cover !important;
     background-position: center;
     margin: 8px;
-    /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 
 .album-title {
     position: absolute;
-    top: var(--nav-height);
-    /* padding-top: var(--nav-height); */
+    top: 0;
+    padding-top: var(--nav-height);
 }

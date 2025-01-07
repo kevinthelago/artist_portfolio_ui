@@ -75,6 +75,7 @@ html {
 .nav-links {
   z-index: 1;
   position: absolute;
+  overflow: hidden;
   background-color: var(--primary-background-color);
   top: var(--nav-height);
   height: calc(100vh - var(--nav-height));

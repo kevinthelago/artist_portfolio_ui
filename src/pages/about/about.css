@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
@@ -49,4 +50,15 @@
 
 .description-card-text>h4 {
     padding: 8px;
+}
+
+@media screen and (min-width: 600px) {
+    .about-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
 }
