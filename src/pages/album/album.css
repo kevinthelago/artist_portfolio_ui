@@ -1,9 +1,9 @@
 .album-pieces {
     padding-top: calc(var(--nav-height) + 1em);
-    height: calc(100% - var(--nav-height) - 1em);
+    height: calc(100% - var(--nav-height) - 1em - 8px);
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2fr);
     overflow-y: auto;
 }
@@ -16,11 +16,11 @@
 }
 
 .album-piece {
-    height: 100%;
-    width: 100%;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
     background-size: cover !important;
     background-position: center;
-    margin: 8px;
+    margin: 4px;
     background-repeat: no-repeat;
 }
 
@@ -28,4 +28,10 @@
     position: absolute;
     top: 0;
     padding-top: var(--nav-height);
+}
+
+@media screen and (min-width: 600px) {
+    .album-pieces {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
