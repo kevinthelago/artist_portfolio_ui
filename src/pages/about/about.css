@@ -2,18 +2,12 @@
     padding-top: var(--nav-height);
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .about-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding-top: calc(var(--nav-height) + 30px);
-    /* height: 100%; */
+    /* padding-top: calc(var(--nav-height) + 30px); */
+    height: 100%;
     width: 100%;
 }
 
@@ -37,13 +31,6 @@
     background-position: contain;
 }
 
-.about-card-email {
-    padding-top: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .description-card {
     width: 300px;
     padding: 8px;
@@ -55,11 +42,8 @@
 
 @media screen and (min-width: 600px) {
     .about-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: row;
-        height: 100%;
+        height: calc(100% - 128px);
         width: 100%;
     }
 }

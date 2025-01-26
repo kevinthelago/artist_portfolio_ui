@@ -9,8 +9,8 @@ const Album = ({artist, album, settings}) => {
             </div>
             <div className='album-pieces'>
                 {album.files.map((filename, i) => (
-                    <div className='album-piece-wrapper'>
-                        <div key={filename} className='album-piece' style={{
+                    <div key={filename} className='album-piece-wrapper'>
+                        <div className='album-piece' style={{
                             backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${filename})`
                         }}>
                     

@@ -10,6 +10,7 @@ import Admin from "./pages/admin/Admin";
 import NotFound from "./pages/not_found/NotFound";
 import Loading from "./pages/loading/Loading";
 import "./app.css";
+import './style.css';
 
 function App() {
     let [settings, setSettings] = useState({

@@ -16,9 +16,10 @@ nav {
   padding-left: var(--nav-side-padding);
   padding-right: var(--nav-side-padding);
   background-color: var(--ui-primary-background-color);
-  display: flex !important;
+  /* display: flex !important;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  box-shadow: 1px 5px 5px rgba(0,0,0,0.1);
 }
 
 ul {
@@ -92,6 +93,8 @@ html {
   width: var(--nav-height);
   color: black;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links-mobile-navigator:hover>svg {

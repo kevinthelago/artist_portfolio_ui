@@ -1,5 +1,5 @@
 .album-pieces {
-    padding-top: calc(var(--nav-height) + 1em);
+    /* padding-top: calc(var(--nav-height) + 3em); */
     height: calc(100% - var(--nav-height) - 1em - 8px);
     width: 100%;
     display: grid;
@@ -25,9 +25,10 @@
 }
 
 .album-title {
-    position: absolute;
-    top: 0;
-    padding-top: var(--nav-height);
+    margin-top: var(--nav-height);
+    padding: 1em;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 600px) {

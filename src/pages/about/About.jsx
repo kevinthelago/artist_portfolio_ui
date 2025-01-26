@@ -1,11 +1,10 @@
 import Footer from '../../components/footer/Footer';
-import Icon from '../../icons/Icon';
 import './about.css';
 
 const About = ({artist, settings}) => {
     return(
-        <div className='page about gallery-theme'>
-            <div className="about-wrapper">
+        <div className='page about gallery-theme flexc'>
+            <div className="about-wrapper flexc">
                 <div className="about-card">
                     <div className='about-card-image-wrapper'>
                         <img className='about-image' alt='' src={`${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${artist.image}`} />

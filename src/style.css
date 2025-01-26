@@ -1,0 +1,11 @@
+.flexc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

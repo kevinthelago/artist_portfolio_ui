@@ -15,7 +15,7 @@ code {
 :root, .gallery-theme {
   --primary-text-color: var(--black);
   --primary-background-color: var(--white);
-  --ui-primary-background-color: rgba(150,150,150,0.3);
+  --ui-primary-background-color: rgba(255,255,255,0.3);
 }
 
 /* :root, .fun-theme {
@@ -35,7 +35,7 @@ code {
   --icon-medium: 2em;
   --icon-small: 1em;
 
-  --nav-height: 4em;
+  --nav-height: 4rem;
 
   --li-side-padding: 0.2em;
 
