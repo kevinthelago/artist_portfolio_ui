@@ -6,7 +6,6 @@ import About from "./pages/about/About";
 import Album from "./pages/album/Album";
 import Albums from "./pages/albums/Albums";
 import Nav from "./pages/Nav";
-import Admin from "./pages/admin/Admin";
 import NotFound from "./pages/not_found/NotFound";
 import Loading from "./pages/loading/Loading";
 import "./app.css";
@@ -60,7 +59,6 @@ function App() {
                             <Route index element={<Home artist={artist} albums={albums} settings={settings} />} />
                             <Route path="/albums" element={<Albums artist={artist} albums={albums} settings={settings} />} />
                             <Route path="/about" element={<About artist={artist} settings={settings} />} />
-                            <Route path="/admin" element={<Admin artist={artist} albums={albums} settings={settings} />} />
                             {albums.map((album) => (
                                 <Route
                                     key={album.name + " route"}

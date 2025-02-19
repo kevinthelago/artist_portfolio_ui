@@ -3,6 +3,10 @@ import Footer from '../../components/footer/Footer';
 import './albums.css';
 
 const Albums = ({ artist, albums, settings }) => {
+    albums.sort(function(a, b) {
+        return a.index - b.index;
+    });
+
     return (
         <div className="page albums">
             {albums.map((album, i) => (

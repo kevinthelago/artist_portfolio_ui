@@ -2,16 +2,20 @@ import Footer from '../../components/footer/Footer';
 import './album.css';
 
 const Album = ({artist, album, settings}) => {
+    album.pieces.sort(function (a, b) {
+        return a.index - b.index
+    })
+
     return(
         <div className={`page ${settings.theme}-theme`}>
             <div className='album-title'>
                 {album.name}
             </div>
             <div className='album-pieces'>
-                {album.files.map((filename, i) => (
-                    <div key={filename} className='album-piece-wrapper'>
+                {album.pieces.map((piece, i) => (
+                    <div key={piece.file} className='album-piece-wrapper'>
                         <div className='album-piece' style={{
-                            backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${filename})`
+                            backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${piece.file})`
                         }}>
                     
                         </div>
