@@ -1,6 +1,6 @@
 .footer {
     z-index: 100;
-    height: 128px;
+    height: var(--footer-height);
     width: 100%;
     background: var(--ui-primary-background-color);
     flex-direction: column;

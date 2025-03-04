@@ -122,12 +122,6 @@ html {
   width: 32px;
 }
 
-.flexc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media screen and (min-width: 600px) {
   .nav-links {
     background-color: transparent;
