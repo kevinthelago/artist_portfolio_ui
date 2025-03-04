@@ -14,7 +14,7 @@ import './style.css';
 function App() {
     let [settings, setSettings] = useState({
         theme: "gallery"
-    })
+    });
     let [artist, setArtist] = useState({});
     let [albums, setAlbums] = useState([]);
 

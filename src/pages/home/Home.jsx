@@ -1,6 +1,5 @@
 import AlbumParallaxBanner from "../../components/album_parallax_banner/AlbumParallaxBanner";
 import Footer from "../../components/footer/Footer";
-import Scrollbar from "../../components/scrollbar/Scrollbar";
 import video from "./IMG_5829.MOV";
 import "./home.css";
 
