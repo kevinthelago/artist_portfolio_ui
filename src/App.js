@@ -12,11 +12,15 @@ import "./app.css";
 import './style.css';
 
 function App() {
-    let [settings, setSettings] = useState({
-        theme: "gallery"
-    });
+    let [settings, setSettings] = useState({});
     let [artist, setArtist] = useState({});
     let [albums, setAlbums] = useState([]);
+
+    useEffect(() => {
+        setSettings({
+            theme: "gallery"
+        })
+    }, [])
 
     useEffect(() => {
         const fetchData = async () => {
