@@ -1,6 +1,6 @@
 .album-pieces {
-    /* padding-top: calc(var(--nav-height) + 3em); */
-    height: calc(100% - var(--nav-height) - 1em - 8px);
+    padding-top: var(--nav-height);
+    height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -20,19 +20,13 @@
     width: calc(100% - 8px);
     background-size: cover !important;
     background-position: center;
-    margin: 4px;
+    margin: 8px;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 
 .album-title {
-    margin-top: var(--nav-height);
-    padding: 1em;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-@media screen and (min-width: 600px) {
-    .album-pieces {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    position: absolute;
+    top: var(--nav-height);
+    /* padding-top: var(--nav-height); */
 }
