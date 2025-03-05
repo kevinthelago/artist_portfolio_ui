@@ -1,7 +1,7 @@
 # Artist Portfolio
 
-![Production Build](https://github.com/kevinthelago/wotos-vehicle-service/actions/workflows/dev.yml/badge.svg)
-![Development Build](https://github.com/kevinthelago/wotos-vehicle-service/actions/workflows/dev.yml/badge.svg)
+![Production Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/dev.yml/badge.svg)
+![Development Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/prod.yml/badge.svg)
 
 ## Running Locally
 
