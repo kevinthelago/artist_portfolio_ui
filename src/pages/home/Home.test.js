@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Home from './pages/home/Home.jsx';
+import Home from './Home';
 
 test('renders home page hero', () => {
   const { getByTestId } = render(<Home 

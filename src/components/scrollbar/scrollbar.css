@@ -1,7 +1,0 @@
-#scrollbar {
-    z-index: 1000;
-    position: absolute;
-    right: 0;
-    margin: 4px;
-    /* transition: 0.1s; */
-}
