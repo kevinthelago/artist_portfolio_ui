@@ -9,7 +9,7 @@ const Home = ({ artist, albums, settings }) => {
         <div id="page" className={`home page ${settings.theme}-theme`}>
             {/* <div id="home-background" style={{background: `url(${background}) no-repeat center`, top: backgroundPosition}}></div> */}
             <div id="home-hero" className="hero">
-                <video id="home-hero-video" loop autoPlay muted playsInline>
+                <video id="home-hero-video" loop autoPlay muted playsInline data-testid="home-hero-video">
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
