@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Artist Portfolio UI
 
 ![Production Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/main.yml/badge.svg)
 ![Development Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/dev.yml/badge.svg)
