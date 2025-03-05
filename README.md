@@ -8,6 +8,10 @@
 <img align="left" alt="JavaScript" style="width: 32px; padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 <img align="left" alt="React" style="width: 32px; padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
 
+<br />
+
+---
+
 ## Running Locally
 
 <details><summary><h2>BASH</h2></summary>
