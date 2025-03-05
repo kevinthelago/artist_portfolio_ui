@@ -1,6 +1,6 @@
 const Loading = (props) => {
     return(
-        <div className="page loading">
+        <div className="page loading" data-testid="loading">
             Loading..
         </div>
     )

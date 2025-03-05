@@ -8,7 +8,7 @@ const Albums = ({ artist, albums, settings }) => {
     });
 
     return (
-        <div className="page albums">
+        <div className="page albums" data-testid="albums">
             {albums.map((album, i) => (
                 <AlbumParallaxBanner key={"albums-album-parallax-banner-" + i} artist={artist} album={album} direction={i % 2 !== 0} end={i === albums.length - 1} />
             ))}

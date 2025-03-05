@@ -26,6 +26,7 @@ const AlbumParallaxBanner = ({ artist, album, direction, end }) => {
                         ),
                     },
                 ]}
+                data-testid="parallax-banner"
             ></ParallaxBanner>
             {end ? <></> : <div className="album-break"></div>}
         </>

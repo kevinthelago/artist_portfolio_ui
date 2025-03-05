@@ -2,7 +2,7 @@ import './notFound.css';
 
 const NotFound = (props) => {
     return(
-        <div className='page not-found'>
+        <div className='page not-found' data-testid="not-found">
             Page not found
         </div>
     )
