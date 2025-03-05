@@ -3,7 +3,7 @@ import './about.css';
 
 const About = ({artist, settings}) => {
     return(
-        <div className='page about gallery-theme flexc'>
+        <div className='page about gallery-theme flexc' data-testid="about">
             <div className="about-wrapper flexc">
                 <div className="about-card">
                     <div className='about-card-image-wrapper'>

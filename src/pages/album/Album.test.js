@@ -1,8 +1,9 @@
 import { render } from '@testing-library/react';
-import Home from './Home';
+import Album from './Album';
 
 test('renders home page hero', () => {
-  const { getByTestId } = render(<Home 
+    // artist, album, settings
+  const { getByTestId } = render(<Album 
     artist={{
       uuid: "",
       albums: [],
@@ -11,14 +12,14 @@ test('renders home page hero', () => {
       name: "Test Artist",
       links: [],
     }} 
-    albums={[
-
-    ]} 
+    album={{
+        pieces: []
+    }} 
     settings={{
       theme: "gallery"
     }}
   />);
   
-  const hero = getByTestId("home-hero-video");
-  expect(hero).toBeInTheDocument();
+  const album = getByTestId("album");
+  expect(album).toBeInTheDocument();
 });
