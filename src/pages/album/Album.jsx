@@ -7,7 +7,7 @@ const Album = ({artist, album, settings}) => {
     })
 
     return(
-        <div className={`page ${settings.theme}-theme`}>
+        <div className={`page album ${settings.theme}-theme`} data-testid="album">
             <div className='album-title'>
                 {album.name}
             </div>
