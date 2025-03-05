@@ -1,5 +1,6 @@
 .about {
     padding-top: var(--nav-height);
+    min-height: calc(100% - var(--nav-height));
     /* height: calc(100% - var(--nav-height)); */
     width: 100%;
 }
@@ -7,9 +8,7 @@
 .about-wrapper {
     padding-top: var(--nav-height);
     flex-direction: column;
-    /* height: 100%; */
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
 }
 
 .about-card {
