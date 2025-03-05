@@ -3,6 +3,10 @@
 ![Production Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/main.yml/badge.svg)
 ![Development Build](https://github.com/kevinthelago/artist_portfolio_ui/actions/workflows/dev.yml/badge.svg)
 
+## Technologies Used
+
+<img align="left" alt="JavaScript" style="width: 32px; padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img align="left" alt="React" style="width: 32px; padding-right: 8px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
 
 ## Running Locally
 
