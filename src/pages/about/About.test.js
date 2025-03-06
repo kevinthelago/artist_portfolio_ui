@@ -1,24 +1,21 @@
 import { render } from '@testing-library/react';
-import Home from './Home';
+import About from './About';
 
-test('renders home page hero', () => {
-  const { getByTestId } = render(<Home 
+test('renders about page', () => {
+  const { getByTestId } = render(<About 
     artist={{
       uuid: "",
-      albums: [],
       email: "testemail@testdomain.com",
+      about: "",
       image: "",
       name: "Test Artist",
       links: [],
     }} 
-    albums={[
-
-    ]} 
     settings={{
       theme: "gallery"
     }}
   />);
   
-  const hero = getByTestId("home-hero-video");
-  expect(hero).toBeInTheDocument();
+  const about = getByTestId("about");
+  expect(about).toBeInTheDocument();
 });
