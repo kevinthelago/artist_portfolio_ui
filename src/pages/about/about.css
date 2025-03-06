@@ -1,11 +1,13 @@
 .about {
     padding-top: var(--nav-height);
-    height: calc(100% - var(--nav-height));
+    /* height: calc(100% - var(--nav-height)); */
+    min-height: calc(100% - var(--nav-height));
     width: 100%;
 }
 
 .about-wrapper {
-    min-height: calc(100% - var(--footer-height) - (var(--nav-height) * 2));
+    height: 100%;
+    min-height: calc(100%);
     padding-top: var(--nav-height);
     padding-bottom: var(--nav-height);
     flex-direction: column;
@@ -40,7 +42,7 @@
 @media screen and (min-width: 600px) {
     .about-wrapper {
         flex-direction: row;
-        height: 100%;
+        min-height: calc(100vh - var(--footer-height) - (var(--nav-height) * 3));
         width: 100%;
     }
 
