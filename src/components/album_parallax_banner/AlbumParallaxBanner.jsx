@@ -3,7 +3,11 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import "./albumParallaxBanner.css";
 
 const AlbumParallaxBanner = ({ artist, album, direction, end }) => {
-    // let albumImage = album.pieces.filter(piece => piece.isAlbumCover === true);
+    let albumImage;
+
+    if (album.pieces.length() > 0) {
+        albumImage = album.pieces.filter(piece => piece.isAlbumCover === true)[0].file;
+    }
 
     return (
         <>
