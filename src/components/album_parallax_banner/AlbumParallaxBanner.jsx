@@ -15,7 +15,7 @@ const AlbumParallaxBanner = ({ artist, album, direction, end }) => {
                 className="parallax-banner"
                 layers={[
                     {
-                        image: `${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${album.pieces[0].file}`,
+                        image: `${process.env.REACT_APP_IMAGES_URL}${artist.uuid}/${albumImage}`,
                         speed: 50,
                     },
                     {

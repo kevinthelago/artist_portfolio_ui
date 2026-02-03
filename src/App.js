@@ -12,15 +12,8 @@ import "./app.css";
 import './style.css';
 
 function App() {
-    let [settings, setSettings] = useState({});
     let [artist, setArtist] = useState({});
     let [albums, setAlbums] = useState([]);
-
-    useEffect(() => {
-        setSettings({
-            theme: "gallery"
-        })
-    }, [])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -45,6 +38,7 @@ function App() {
             )
                 .then((response) => response.json())
                 .then((data) => {
+                    console.log(data)
                     setArtist(data);
                 })
                 .catch((error) => {
@@ -59,15 +53,15 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     {Object.keys(artist).length === 0 ? <Route path="/" element={<Loading />} /> :
-                        <Route path="/" element={<Nav artist={artist} settings={settings} />}>
-                            <Route index element={<Home artist={artist} albums={albums} settings={settings} />} />
-                            <Route path="/albums" element={<Albums artist={artist} albums={albums} settings={settings} />} />
-                            <Route path="/about" element={<About artist={artist} settings={settings} />} />
+                        <Route path="/" element={<Nav artist={artist} settings={artist.settings} />}>
+                            <Route index element={<Home artist={artist} albums={albums} settings={artist.settings} />} />
+                            <Route path="/albums" element={<Albums artist={artist} albums={albums} settings={artist.settings} />} />
+                            <Route path="/about" element={<About artist={artist} settings={artist.settings} />} />
                             {albums.map((album) => (
                                 <Route
                                     key={album.name + " route"}
                                     path={"/albums/" + album.url}
-                                    element={<Album artist={artist} album={album} settings={settings} />}
+                                    element={<Album artist={artist} album={album} settings={artist.settings} />}
                                 />
                             ))}
                             <Route path="*" element={<NotFound artist={artist} />} />
